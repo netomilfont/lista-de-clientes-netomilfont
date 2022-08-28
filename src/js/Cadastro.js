@@ -27,7 +27,7 @@ export default class CadastrarUsuario {
                 idade:inputIdade.value,
                 cpf: inputCpf.value,
                 endereco: {
-                    estadp: inputEstado.value,
+                    estado: inputEstado.value,
                     cidade:inputCidade.value,
                     bairro:inputBairro.value,
                     numero:inputNumCasa.value,
@@ -43,3 +43,5 @@ export default class CadastrarUsuario {
 
     }
 }
+
+CadastrarUsuario.novoUsuario()

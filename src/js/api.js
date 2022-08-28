@@ -28,6 +28,7 @@ export default class Api {
         .then(res => res.json())
         .catch(err => console.log(err))
 
+        window.location.assign("../../index.html")
         return cadUsuario
     }
 
