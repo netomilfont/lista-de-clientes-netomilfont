@@ -20,7 +20,15 @@ export default class Api {
     }
 
     static async cadastrarCliente(data){
-        
+        const cadUsuario = await fetch(`${this.BASEURL}/clientes`, {
+            method: "POST",
+            headers: this.headers,
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .catch(err => console.log(err))
+
+        return cadUsuario
     }
 
     static async editarCliente(id, data){
