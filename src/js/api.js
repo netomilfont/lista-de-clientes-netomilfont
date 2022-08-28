@@ -33,7 +33,18 @@ export default class Api {
     }
 
     static async editarCliente(id, data){
+        const editCliente = await fetch(`${this.BASEURL}/clientes/${id}`, {
+            method:"PATCH",
+            headers: this.headers,
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .catch(err => console.log(err))
 
+        window.location.assign("../../index.html")
+
+
+        return editCliente
     }
 
     static async deletarCliente(id){
