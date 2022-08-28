@@ -41,6 +41,7 @@ export default class Api {
         .then(res => res.json())
         .catch(err => console.log(err))
 
+        localStorage.removeItem("@kenzieEdit:UserId")
         window.location.assign("../../index.html")
 
 
@@ -48,12 +49,14 @@ export default class Api {
     }
 
     static async deletarCliente(id){
-        const deleteCliente = await fetch(`${this.BASEURL}/cliente/${id}`, {
+        const deleteCliente = await fetch(`${this.BASEURL}/clientes/${id}`, {
             method: "DELETE",
             headers: this.headers
         })
         .then(res => res.json())
         .catch(err => console.log(err))
+
+        window.location.assign("../../index.html")
 
     }
 
