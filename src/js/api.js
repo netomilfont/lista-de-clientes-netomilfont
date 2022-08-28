@@ -48,6 +48,12 @@ export default class Api {
     }
 
     static async deletarCliente(id){
+        const deleteCliente = await fetch(`${this.BASEURL}/cliente/${id}`, {
+            method: "DELETE",
+            headers: this.headers
+        })
+        .then(res => res.json())
+        .catch(err => console.log(err))
 
     }
 
