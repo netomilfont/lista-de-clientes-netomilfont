@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/styleBase.css">
     <script type="module" defer src="../js/buscaCliente.js"></script>
+    <script type="module" defer src="../js/Edit.js"></script>
     <title>Entrega Lista de Clientes</title>
 </head>
 <body>
@@ -23,7 +24,9 @@
         
         <label for="cliente">Escolha o cliente que quer editar</label>
         
-        <select class="selectBusca" name="cliente"></select>
+        <select class="selectBusca" name="cliente">
+            <option value="">Escolher cliente</option>
+        </select>
 
         <button class="btnBuscar">Buscar Cliente</button>
 
@@ -60,7 +63,7 @@
         <input class="inputEstado" type="text" name="estado" placeholder="digite seu estado"/>
 
 
-        <button>Atualizar Dados</button>
+        <button class="btnEditar" >Atualizar Dados</button>
     </form>
 
 

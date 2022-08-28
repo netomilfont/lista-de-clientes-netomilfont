@@ -5,7 +5,7 @@ export default class Buscar {
     static buscaCliente (data) {
         const busca = document.querySelector(".selectBusca")
         const butnBusca = document.querySelector(".btnBuscar")
-
+    
         data.forEach(element => {
             const option = document.createElement("option")
             option.innerText = element.nome
@@ -50,14 +50,12 @@ export default class Buscar {
                         inputCidade.value = element.endereco.cidade
                         inputEstado.value = element.endereco.estado
                     }
-
                 })
-
-
-    
+                
+                localStorage.setItem("@kenzieEdit:UserId", id)
             })
-        })
 
+        })
         
     }
 
