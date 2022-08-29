@@ -1,4 +1,4 @@
-import Api from "./api.js";
+import Api from "./Api.js";
 import Client from "./render.js";
 
 const clientes = await Api.listarClientes()
