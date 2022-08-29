@@ -1,5 +1,3 @@
-import Client from "./render.js"
-
 export default class Api {
 
     static BASEURL = "https://atividade-api-clientes.herokuapp.com"
