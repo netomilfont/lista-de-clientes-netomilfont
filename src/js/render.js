@@ -1,3 +1,5 @@
+import Api from "./Api.js"
+
 export default class Client {
 
     static renderClient (array) {
@@ -53,3 +55,5 @@ export default class Client {
     
 }
 
+const clientes = await Api.listarClientes()
+Client.renderClient(clientes)
